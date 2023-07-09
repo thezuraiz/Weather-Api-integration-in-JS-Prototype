@@ -12,7 +12,7 @@ cities.map((x) => {
   x.then((response) => {
     return response.json();
   }).then((result) => {
-    console.log(result);
+    // console.log(result);
     document.getElementsByClassName("temp")[i].innerHTML += ` ${result.current_weather.temperature} C`;
     document.getElementsByClassName("wind")[i].innerHTML += ` ${result.current_weather.windspeed} Km/h`;
     document.getElementsByClassName("img")[i].src =`${result.current_weather.temperature<32? "https://coalregioncanary.com/wp-content/uploads/2020/08/summer.gif": "https://cdn.dribbble.com/users/93925/screenshots/14245026/media/22e55f25c832ff423c88d93cda1edc0c.gif"}`
